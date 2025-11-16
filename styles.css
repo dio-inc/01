@@ -12,7 +12,7 @@ body{font-family:system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Noto Sans 
 .container{max-width:var(--maxw);margin:0 auto;padding:24px}
 .site-header{background:#fff;border-bottom:1px solid #e6e6e6;position:sticky;top:0;z-index:50}
 .site-header .container{display:flex;align-items:center;gap:16px}
-.brand h1{margin:8px 0 0;font-size60px;color:var(--main)}
+.brand h1{margin:24px 0 0;font-size60px;color:var(--main)}
 .brand .sub{margin:0;font-size:13px;color:var(--text)}
 .nav{margin-left:auto;display:flex;gap:12px;align-items:center}
 .nav a{color:var(--text);text-decoration:none;padding:8px 10px;border-radius:6px}
@@ -70,7 +70,7 @@ body{font-family:system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Noto Sans 
   .nav-toggle{display:block}
 }
 @media(max-width:560px){
-  .hero-img{height:240px}
+  .hero-img{height:480px}
   .hero-inner h2{font-size:80px}
   .grid-6{grid-template-columns:1fr}
 }
