@@ -1,4 +1,3 @@
-/* ====== ブラウン薄めプロカラー版 ====== */
 :root{
   --accent:#7A5A3D;
   --main:#D7B894;
@@ -8,7 +7,7 @@
   --maxw:1100px;
 }
 
-*{box-sizing:border-box}
+*{box-sizing:border-box;}
 
 body{
   font-family:system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Noto Sans JP",Segoe UI,Roboto,sans-serif;
@@ -18,13 +17,8 @@ body{
   line-height:1.6;
 }
 
-.container{
-  max-width:var(--maxw);
-  margin:0 auto;
-  padding:24px;
-}
+.container{max-width:var(--maxw);margin:0 auto;padding:24px;}
 
-/* ====== ヘッダー ====== */
 .site-header{
   background:#fff;
   border-bottom:1px solid #e6e6e6;
@@ -32,326 +26,66 @@ body{
   top:0;
   z-index:50;
 }
+.site-header .container{display:flex;align-items:center;gap:16px;}
+.brand h1{margin:8px 0 0;font-size:28px;color:var(--main);}
+.brand .sub{margin:0;font-size:13px;color:var(--text);}
+.nav{margin-left:auto;display:flex;gap:12px;align-items:center;}
+.nav a{color:var(--text);text-decoration:none;padding:8px 10px;border-radius:6px;}
+.nav a.btn{border:1px solid var(--main);}
+.nav a.btn.primary{background:var(--accent);color:#fff;border:none;}
+.nav.open{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:8px;}
+.nav-toggle{display:none;background:none;border:0;font-size:20px;padding:8px;margin-left:auto;}
 
-.site-header .container{
-  display:flex;
-  align-items:center;
-  gap:16px;
-}
+.hero{position:relative;overflow:hidden;}
+.hero-img{width:100%;height:360px;object-fit:cover;filter:brightness(0.5);}
+.hero-inner{position:absolute;left:0;right:0;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;color:#fff;text-align:left;padding:40px;}
+.hero-inner h2{font-size:32px;margin:0 0 12px;}
+.hero-inner p{margin:0 0 16px;}
+.btn{display:inline-block;background:var(--main);color:var(--text);padding:10px 16px;border-radius:8px;text-decoration:none;border:1px solid rgba(0,0,0,0.06);}
+.btn.primary{background:var(--accent);color:#fff;border:none;}
+.btn.phone{background:var(--main);color:var(--text);}
 
-.brand h1{
-  margin:8px 0 0;
-  font-size:28px; /* 大きくした */
-  color:var(--main);
-}
+.reasons, .services, .works, .company, .contact{padding:36px 0;}
+h3{margin-bottom:18px;text-align:left;margin-left:16px;}
+.cards{display:flex;gap:16px;flex-wrap:wrap;}
+.card{background:var(--sub);padding:18px;border-radius:8px;flex:1;min-width:220px;box-shadow:0 2px 6px rgba(0,0,0,0.04);}
+.grid{display:grid;gap:16px;}
+.grid-6{grid-template-columns:repeat(3,1fr);}
+.svc{background:var(--sub);padding:18px;border-radius:8px;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,0.04);}
+.svc img{width:64px;height:64px;margin-bottom:8px;}
 
-.brand .sub{
-  margin:0;
-  font-size:13px;
-  color:var(--text);
-}
+.gallery{display:grid;grid-template-columns:1fr;gap:16px;padding-left:16px;padding-right:16px;}
+.gallery img{width:100%;height:380px;object-fit:cover;border-radius:8px;box-shadow:0 3px 6px rgba(0,0,0,0.2);}
+.gallery figcaption{font-size:14px;color:var(--text);margin-top:6px;text-align:left;}
 
-.nav{
-  margin-left:auto;
-  display:flex;
-  gap:12px;
-  align-items:center;
-}
+.company{padding:36px 0;background:var(--sub);border-radius:8px;}
+.profile{width:100%;border-collapse:collapse;}
+.profile th{text-align:left;padding:8px;width:160px;color:var(--text);vertical-align:top;}
+.profile td{padding:8px;border-top:1px solid #e6e6e6;}
 
-.nav a{
-  color:var(--text);
-  text-decoration:none;
-  padding:8px 10px;
-  border-radius:6px;
-}
+.contact{display:grid;grid-template-columns:1fr 300px;gap:24px;}
+.contact-form{background:var(--sub);padding:18px;border-radius:8px;}
+.contact-form label{display:block;margin-bottom:12px;}
+.contact-form input,.contact-form textarea{width:100%;padding:10px;border:1px solid #e6e6e6;border-radius:6px;}
+.contact p.contact-note{padding-left:16px;margin-bottom:12px;color:var(--text);font-size:14px;}
+.form-note{font-size:13px;color:var(--text);}
+.contact-side{background:var(--sub);padding:18px;border-radius:8px;height:fit-content;}
 
-.nav a.btn{
-  border:1px solid var(--main);
-}
+.site-footer{background:#4B3A2A;color:#fff;padding:20px 0;margin-top:24px;}
+.site-footer p{margin:6px 0;font-size:14px;text-align:center;}
 
-.nav a.btn.primary{
-  background:var(--accent);
-  color:#fff;
-  border:none;
-}
-
-/* ハンバーガー時横並び表示 */
-.nav.open {
-  display:flex;
-  flex-direction:row;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:12px;
-  margin-top:8px;
-}
-
-.nav-toggle{
-  display:none;
-  background:none;
-  border:0;
-  font-size:20px;
-  padding:8px;
-  margin-left:auto;
-}
-
-/* ====== ヒーロー ====== */
-.hero{
-  position:relative;
-  overflow:hidden;
-}
-
-.hero-img{
-  width:100%;
-  height:360px;
-  object-fit:cover;
-  filter:brightness(0.5);
-}
-
-.hero-inner{
-  position:absolute;
-  left:0;
-  right:0;
-  top:0;
-  bottom:0;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  color:#fff;
-  text-align:left;
-  padding:40px;
-}
-
-.hero-inner h2{
-  font-size:32px;
-  margin:0 0 12px;
-}
-
-.hero-inner p{
-  margin:0 0 16px;
-}
-
-.btn{
-  display:inline-block;
-  background:var(--main);
-  color:var(--text);
-  padding:10px 16px;
-  border-radius:8px;
-  text-decoration:none;
-  border:1px solid rgba(0,0,0,0.06);
-}
-
-.btn.primary{
-  background:var(--accent);
-  color:#fff;
-  border:none;
-}
-
-.btn.phone{
-  background:var(--main);
-  color:var(--text);
-}
-
-/* ====== セクション共通 ====== */
-.reasons, .services, .works, .company, .contact{
-  padding:36px 0;
-}
-
-h3{
-  margin-bottom:18px;
-  text-align:left;
-  margin-left:16px; /* 左に少し余白 */
-}
-
-.cards{
-  display:flex;
-  gap:16px;
-  flex-wrap:wrap;
-}
-
-.card{
-  background:var(--sub);
-  padding:18px;
-  border-radius:8px;
-  flex:1;
-  min-width:220px;
-  box-shadow:0 2px 6px rgba(0,0,0,0.04);
-}
-
-.grid{
-  display:grid;
-  gap:16px;
-}
-
-.grid-6{
-  grid-template-columns:repeat(3,1fr);
-}
-
-.svc{
-  background:var(--sub);
-  padding:18px;
-  border-radius:8px;
-  text-align:center;
-  box-shadow:0 2px 6px rgba(0,0,0,0.04);
-}
-
-.svc img{
-  width:64px;
-  height:64px;
-  margin-bottom:8px;
-}
-
-/* ===========================
-   施工写真ギャラリー大迫力版
-=========================== */
-.gallery{
-  display:grid;
-  grid-template-columns:1fr; /* 初期は1列 */
-  gap:16px;
-  padding-left:16px;
-  padding-right:16px;
-}
-
-.gallery img{
-  width:100%;
-  height:380px; /* 高さ大きめ */
-  object-fit:cover;
-  border-radius:8px;
-  box-shadow:0 3px 6px rgba(0,0,0,0.2);
-}
-
-.gallery figcaption{
-  font-size:14px;
-  color:var(--text);
-  margin-top:6px;
-  text-align:left;
-}
-
-/* ====== 会社概要 ====== */
-.company{
-  padding:36px 0;
-  background:var(--sub);
-  border-radius:8px;
-}
-
-.profile{
-  width:100%;
-  border-collapse:collapse;
-}
-
-.profile th{
-  text-align:left;
-  padding:8px;
-  width:160px;
-  color:var(--text);
-  vertical-align:top;
-}
-
-.profile td{
-  padding:8px;
-  border-top:1px solid #e6e6e6;
-}
-
-/* ====== お問い合わせ ====== */
-.contact{
-  display:grid;
-  grid-template-columns:1fr 300px;
-  gap:24px;
-}
-
-.contact-form{
-  background:var(--sub);
-  padding:18px;
-  border-radius:8px;
-}
-
-.contact-form label{
-  display:block;
-  margin-bottom:12px;
-}
-
-.contact-form input,
-.contact-form textarea{
-  width:100%;
-  padding:10px;
-  border:1px solid #e6e6e6;
-  border-radius:6px;
-}
-
-.contact p.contact-note{
-  padding-left:16px; /* 左余白 */
-  margin-bottom:12px;
-  color:var(--text);
-  font-size:14px;
-}
-
-.form-note{
-  font-size:13px;
-  color:var(--text);
-}
-
-.contact-side{
-  background:var(--sub);
-  padding:18px;
-  border-radius:8px;
-  height:fit-content;
-}
-
-/* ====== フッター ====== */
-.site-footer{
-  background:#4B3A2A;
-  color:#fff;
-  padding:20px 0;
-  margin-top:24px;
-}
-
-.site-footer p{
-  margin:6px 0;
-  font-size:14px;
-  text-align:center;
-}
-
-/* ====== レスポンシブ ====== */
 @media(max-width:900px){
-  .grid-6{
-    grid-template-columns:repeat(2,1fr);
-  }
-  .gallery{
-    grid-template-columns:1fr; /* スマホ1列 */
-  }
-  .contact{
-    grid-template-columns:1fr;
-  }
-  .nav{
-    display:none;
-  }
-  .nav-toggle{
-    display:block;
-  }
-  .nav.open {
-    position:absolute;
-    top:60px; /* ヘッダー下に表示 */
-    left:0;
-    width:100%;
-    background:var(--bg);
-    padding:8px 0;
-    flex-direction:row; /* 横並び */
-    justify-content:center;
-    gap:12px;
-    border-top:1px solid #e6e6e6;
-  }
+  .grid-6{grid-template-columns:repeat(2,1fr);}
+  .gallery{grid-template-columns:1fr;}
+  .contact{grid-template-columns:1fr;}
+  .nav{display:none;}
+  .nav-toggle{display:block;}
+  .nav.open{position:absolute;top:60px;left:0;width:100%;background:var(--bg);padding:8px 0;flex-direction:row;justify-content:center;gap:12px;border-top:1px solid #e6e6e6;}
 }
 
 @media(max-width:560px){
-  .hero-img{
-    height:240px;
-  }
-  .hero-inner h2{
-    font-size:20px;
-  }
-  .grid-6{
-    grid-template-columns:1fr;
-  }
-  .gallery img{
-    height:auto; /* 縦横比維持 */
-  }
+  .hero-img{height:240px;}
+  .hero-inner h2{font-size:20px;}
+  .grid-6{grid-template-columns:1fr;}
+  .gallery img{height:auto;}
 }
