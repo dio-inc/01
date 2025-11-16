@@ -70,7 +70,7 @@ body{font-family:system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Noto Sans 
   .nav-toggle{display:block}
 }
 @media(max-width:560px){
-  .hero-img{height:480px}
-  .hero-inner h2{font-size:80px}
+  .hero-img{height240px}
+  .hero-inner h2{font-size:20px}
   .grid-6{grid-template-columns:1fr}
 }
